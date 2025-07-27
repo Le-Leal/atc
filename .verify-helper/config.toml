@@ -1,0 +1,6 @@
+[settings]
+default_source_dir = "beg"
+default_result_dir = ".verify-helper"
+
+[language.cplusplus]
+compile_options = ["-I/home/leal/beginner/atc/library"]
