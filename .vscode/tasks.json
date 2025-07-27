@@ -1,0 +1,35 @@
+{
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C/C++: g++ アクティブなファイルのビルド",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}",
+                "-I", "/home/leal/lib/ac-library/ac-library-master",
+                "-I", "/home/leal/beginner/atc/library/mathtype",
+                "-I", "/home/leal/beginner/atc/library/graph",
+                "-I", "/home/leal/beginner/atc/library/string",
+                "-I", "/home/leal/beginner/atc/library/utility",
+                "-I", "/home/leal/beginner/atc/library/structure",
+                "-I", "/home/leal/beginner/atc/library"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "デバッガーによって生成されたタスク。"
+        }
+    ],
+    "version": "2.0.0"
+}

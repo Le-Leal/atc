@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/home/leal/lib/ac-library/ac-library-master",
+                "/home/leal/beginner/atc/library/mathtype",
+                "/home/leal/beginner/atc/library/graph",
+                "/home/leal/beginner/atc/library/string",
+                "/home/leal/beginner/atc/library/utility",
+                "/home/leal/beginner/atc/library/structure"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c17",
+            "cppStandard": "gnu++20",
+            "intelliSenseMode": "linux-gcc-x64"
+        }
+    ],
+    "version": 4
+}
