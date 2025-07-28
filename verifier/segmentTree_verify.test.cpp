@@ -5,7 +5,7 @@ using namespace std;
 #define rep(i,n) for(ll i=0;i<n;i++)
 
 int main() {
-    int n,q; cin>>n>>q;
+    int n,q; cin >> n >> q;
     function<ll(ll,ll)> op=[](ll a,ll b) { return a+b;};
     function<ll()> e=[]() { return 0ll;};
     segtree<ll> seg(n,op,e);

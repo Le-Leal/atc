@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: verifier/segmentTree_verify.test.cpp
+    title: verifier/segmentTree_verify.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"library/structure/segmentTree.hpp\"\n#include <bits/stdc++.h>\n\
@@ -13,8 +16,13 @@ data:
     \ {\n    function<t(t,t)> op;\n    function<t()> e;\n    ll n;\n    vector<t>\
     \ seg;\n    ll siz=1;\n    public:\n        segtree(ll n,function<t(t,t)> op,function<t()>\
     \ e) : n(n),op(op),e(e) {\n            while(siz<n) siz*=2;\n            seg =\
-    \ vector<t>(2*siz,e());\n        }\n        void set(ll ind,t val) {\n       \
-    \     ind+=siz;\n            seg[ind]=val;\n            while(ind>>=1) seg[ind]=op(seg[2*ind],seg[2*ind+1]);\n\
+    \ vector<t>(2*siz,e());\n        }\n\n\n        segtree(const vector<t>& v, function<t(t,t)>\
+    \ op, function<t()> e) : segtree((ll)v.size(), op, e) {\n            for (ll i=0;i<(ll)v.size();++i)\
+    \ seg[siz+i]=v[i];\n            for (ll i=siz-1;i>0;--i) seg[i]=op(seg[2*i],seg[2*i+1]);\n\
+    \        }\n\n        void set(ll ind,t val) {\n            ind+=siz;\n      \
+    \      seg[ind]=val;\n            while(ind>>=1) seg[ind]=op(seg[2*ind],seg[2*ind+1]);\n\
+    \        }\n\n        void add(ll ind,t val) {\n            ind+=siz;\n      \
+    \      seg[ind]=op(seg[ind],val);\n            while(ind>>=1) seg[ind]=op(seg[2*ind],seg[2*ind+1]);\n\
     \        }\n\n        t one_p(ll ind) {\n            return seg[ind+siz];\n  \
     \      }\n\n        t prod(ll lef,ll rig) { // [l,r)\n            lef+=siz,rig+=siz;\n\
     \            t opl=e(),opr=e();\n            for(;lef<rig;lef>>=1,rig>>=1) {\n\
@@ -41,8 +49,13 @@ data:
     \    function<t()> e;\n    ll n;\n    vector<t> seg;\n    ll siz=1;\n    public:\n\
     \        segtree(ll n,function<t(t,t)> op,function<t()> e) : n(n),op(op),e(e)\
     \ {\n            while(siz<n) siz*=2;\n            seg = vector<t>(2*siz,e());\n\
-    \        }\n        void set(ll ind,t val) {\n            ind+=siz;\n        \
-    \    seg[ind]=val;\n            while(ind>>=1) seg[ind]=op(seg[2*ind],seg[2*ind+1]);\n\
+    \        }\n\n\n        segtree(const vector<t>& v, function<t(t,t)> op, function<t()>\
+    \ e) : segtree((ll)v.size(), op, e) {\n            for (ll i=0;i<(ll)v.size();++i)\
+    \ seg[siz+i]=v[i];\n            for (ll i=siz-1;i>0;--i) seg[i]=op(seg[2*i],seg[2*i+1]);\n\
+    \        }\n\n        void set(ll ind,t val) {\n            ind+=siz;\n      \
+    \      seg[ind]=val;\n            while(ind>>=1) seg[ind]=op(seg[2*ind],seg[2*ind+1]);\n\
+    \        }\n\n        void add(ll ind,t val) {\n            ind+=siz;\n      \
+    \      seg[ind]=op(seg[ind],val);\n            while(ind>>=1) seg[ind]=op(seg[2*ind],seg[2*ind+1]);\n\
     \        }\n\n        t one_p(ll ind) {\n            return seg[ind+siz];\n  \
     \      }\n\n        t prod(ll lef,ll rig) { // [l,r)\n            lef+=siz,rig+=siz;\n\
     \            t opl=e(),opr=e();\n            for(;lef<rig;lef>>=1,rig>>=1) {\n\
@@ -68,9 +81,10 @@ data:
   isVerificationFile: false
   path: library/structure/segmentTree.hpp
   requiredBy: []
-  timestamp: '2025-07-28 00:38:07+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  timestamp: '2025-07-28 23:27:00+09:00'
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - verifier/segmentTree_verify.test.cpp
 documentation_of: library/structure/segmentTree.hpp
 layout: document
 redirect_from:

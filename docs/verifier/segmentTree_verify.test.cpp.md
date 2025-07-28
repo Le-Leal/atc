@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: library/structure/segmentTree.hpp
     title: library/structure/segmentTree.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/point_add_range_sum
@@ -50,7 +50,7 @@ data:
     \ {\n                    ansr=op(seg[--RIG],ansr);\n                    rig-=wid;\n\
     \                }\n            }\n            return rig;\n        }\n};\n#line\
     \ 4 \"verifier/segmentTree_verify.test.cpp\"\nusing namespace std;\n#define rep(i,n)\
-    \ for(ll i=0;i<n;i++)\n\nint main() {\n    int n,q; cin>>n>>q;\n    function<ll(ll,ll)>\
+    \ for(ll i=0;i<n;i++)\n\nint main() {\n    int n,q; cin >> n >> q;\n    function<ll(ll,ll)>\
     \ op=[](ll a,ll b) { return a+b;};\n    function<ll()> e=[]() { return 0ll;};\n\
     \    segtree<ll> seg(n,op,e);\n    rep(i,n) {\n        ll x; cin>>x;\n       \
     \ seg.set(i,x);\n    }\n    rep(i,q) {\n        ll ty; cin>>ty;\n        if(ty==0)\
@@ -60,9 +60,9 @@ data:
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/point_add_range_sum\"\n\
     #include <bits/stdc++.h>\n#include \"../library/structure/segmentTree.hpp\"\n\
     using namespace std;\n#define rep(i,n) for(ll i=0;i<n;i++)\n\nint main() {\n \
-    \   int n,q; cin>>n>>q;\n    function<ll(ll,ll)> op=[](ll a,ll b) { return a+b;};\n\
-    \    function<ll()> e=[]() { return 0ll;};\n    segtree<ll> seg(n,op,e);\n   \
-    \ rep(i,n) {\n        ll x; cin>>x;\n        seg.set(i,x);\n    }\n    rep(i,q)\
+    \   int n,q; cin >> n >> q;\n    function<ll(ll,ll)> op=[](ll a,ll b) { return\
+    \ a+b;};\n    function<ll()> e=[]() { return 0ll;};\n    segtree<ll> seg(n,op,e);\n\
+    \    rep(i,n) {\n        ll x; cin>>x;\n        seg.set(i,x);\n    }\n    rep(i,q)\
     \ {\n        ll ty; cin>>ty;\n        if(ty==0) {\n            ll p,x; cin>>p>>x;\n\
     \            seg.add(p,x);\n        } else if(ty==1) {\n            ll l,r; cin>>l>>r;\n\
     \            cout<<seg.prod(l,r)<<endl;\n        }\n    }\n}"
@@ -71,8 +71,8 @@ data:
   isVerificationFile: true
   path: verifier/segmentTree_verify.test.cpp
   requiredBy: []
-  timestamp: '2025-07-28 23:27:00+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2025-07-28 23:55:02+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: verifier/segmentTree_verify.test.cpp
 layout: document

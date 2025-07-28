@@ -75,7 +75,7 @@ data:
     - icon: ':warning:'
       path: library/structure/lis.hpp
       title: library/structure/lis.hpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/structure/segmentTree.hpp
       title: library/structure/segmentTree.hpp
     - icon: ':warning:'
@@ -95,7 +95,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: verifier/UnionFind_verify.test.cpp
       title: verifier/UnionFind_verify.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: verifier/segmentTree_verify.test.cpp
       title: verifier/segmentTree_verify.test.cpp
 layout: toppage
