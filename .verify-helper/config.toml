@@ -1,5 +1,5 @@
 [settings]
-default_source_dir = "beg"
+default_source_dir = "."
 default_result_dir = ".verify-helper"
 
 [language.cplusplus]
@@ -15,4 +15,4 @@ markdown = ".verify-helper/markdown"
 copy_to = ["docs"]
 
 [document.exclude]
-paths = ["beg/**"]
+paths = ["beg/**", "beg/*"]
