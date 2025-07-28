@@ -15,6 +15,13 @@ template<typename t> class segtree {
             while(siz<n) siz*=2;
             seg = vector<t>(2*siz,e());
         }
+
+
+        segtree(const vector<t>& v, function<t(t,t)> op, function<t()> e) : segtree((ll)v.size(), op, e) {
+            for (ll i=0;i<(ll)v.size();++i) seg[siz+i]=v[i];
+            for (ll i=siz-1;i>0;--i) seg[i]=op(seg[2*i],seg[2*i+1]);
+        }
+
         void set(ll ind,t val) {
             ind+=siz;
             seg[ind]=val;
