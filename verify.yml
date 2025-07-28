@@ -1,0 +1,7 @@
+[default]
+library = "library"
+verify = "verifier"
+output = "docs"
+
+[cplusplus]
+compile_options = ["-I./library"]

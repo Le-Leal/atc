@@ -6,7 +6,6 @@ using namespace std;
 #define irep(i,r,l) for(ll i=r;i>=l;i--)
 using ll = long long;
 using ld = long double;
-#define MOD 998244353ll
 #include "mathHelper.hpp"
 
 bool crt(ll a1,ll m1,ll a2,ll m2,ll &r,ll &lcm) {
