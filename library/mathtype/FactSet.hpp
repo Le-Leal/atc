@@ -46,4 +46,5 @@ class factset {
             ans*=_inv[k];
             return ans%MOD;
         }
+        
 };
