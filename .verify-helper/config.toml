@@ -7,3 +7,12 @@ compile_options = ["-I/home/leal/beginner/atc/library"]
 
 [config]
 paths = ["verifier/**", "test/**"]
+
+[document]
+markdown = ".verify-helper/markdown"
+
+[document-output]
+copy_to = ["docs"]
+
+[document.exclude]
+paths = ["beg/**"]
