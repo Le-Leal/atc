@@ -21,6 +21,12 @@ template<typename t> class segtree {
             while(ind>>=1) seg[ind]=op(seg[2*ind],seg[2*ind+1]);
         }
 
+        void add(ll ind,t val) {
+            ind+=siz;
+            seg[ind]=op(seg[ind],val);
+            while(ind>>=1) seg[ind]=op(seg[2*ind],seg[2*ind+1]);
+        }
+
         t one_p(ll ind) {
             return seg[ind+siz];
         }
