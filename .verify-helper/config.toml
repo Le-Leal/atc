@@ -17,3 +17,4 @@ copy_to = ["docs"]
 
 [document.exclude]
 paths = ["beg/**", "beg/*"]
+
